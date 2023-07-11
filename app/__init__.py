@@ -7,5 +7,5 @@ def create_app():
 
     from .views import basic_views, soie_views
     app.register_blueprint(basic_views.fisa)
-    app.register_blueprint(basic_views.soie)
+    app.register_blueprint(soie_views.soie)
     return app
