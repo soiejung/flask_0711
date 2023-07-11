@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 from app.models import Question
 
 
@@ -33,3 +33,12 @@ def hello():
 @soie.route('/bye')
 def bye():
     return "잘가세요"
+
+@fisa.route('/detail/<int:question_id>/')
+def detail(question_id):
+    question = Question.query.get(question_id)
+    return render_template('question/question_detail.html', question=question)
+
+@fisa.route('/post')
+def post_list():
+    return 'question\question_list.html'
