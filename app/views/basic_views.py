@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, redirect
 from app.models import Question
+from app.forms import MyForm
 
 
                 # 우리가 부를 이름, flask 프레임워크가 찾을 이름, 라우팅주소
